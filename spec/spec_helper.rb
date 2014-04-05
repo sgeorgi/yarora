@@ -1,4 +1,11 @@
 ENV["RAILS_ENV"] ||= 'test'
+require 'simplecov'
+
+SimpleCov.start do
+  add_group 'App', 'app/'
+  add_group 'Lib', 'lib/'
+end
+
 require File.expand_path("../../config/environment", __FILE__)
 require 'rspec/rails'
 require 'factory_girl'
