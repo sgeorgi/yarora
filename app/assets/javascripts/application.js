@@ -12,6 +12,6 @@
 //
 //= require jquery
 //= require jquery_ujs
-//= require ./lib
+//= require angular
 //= require_self
 //= require_tree .
