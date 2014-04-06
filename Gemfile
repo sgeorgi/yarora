@@ -10,6 +10,7 @@ gem 'uglifier', '>= 1.3.0'
 
 gem 'jquery-rails'
 gem 'angularjs-rails'
+gem 'foundation-rails'
 gem 'slim-rails'
 gem 'jbuilder', '~> 1.2'
 
