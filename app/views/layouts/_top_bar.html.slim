@@ -10,10 +10,10 @@ nav.top-bar[data-topbar]
 
   section.top-bar-section
     ul.right
-      - if FeatureToggle::on?(:locale_switcher)
+      - if feature_on?(:locale_switcher)
         li
           = locale_switch
-      - if FeatureToggle::on?(:user_login)
+      - if feature_on?(:user_login)
         li.divider
         li.has-dropdown
           a href='#' = t('header.user.title')
@@ -26,5 +26,6 @@ nav.top-bar[data-topbar]
     ul.left
       li class="#{current_page?(root_path) ? 'active' : ''}"
         =link_to t('header.home'), root_path
-      li class="#{current_page?(features_path) ? 'active' : ''}"
-        =link_to t('header.features'), features_path
+      - if feature_on?(:feature_page)
+        li class="#{current_page?(features_path) ? 'active' : ''}"
+          =link_to t('header.features'), features_path
