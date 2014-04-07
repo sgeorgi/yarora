@@ -1,0 +1,8 @@
+de:
+  header:
+    home: 'Startseite'
+    title: 'YaRoRA'
+    user:
+      title: 'Benutzer'
+      login: 'Anmelden'
+      logout: 'Abmelden'

@@ -2,20 +2,20 @@ nav.top-bar[data-topbar]
   ul.title-area
     li.name
       h1
-        a href="#" = 'YaRoRA'
+        a href="#" = t('header.title')
     li.toggle-topbar.menu-icon
-      a href='#' = 'Menu'
+      a href='#' = 'sad'
 
   section.top-bar-section
     ul.right
       li.has-dropdown
-        a href='#' = 'User'
+        a href='#' = t('header.user.title')
         ul.dropdown
           li
-            a href='#' = 'Login'
+            a href='#' = t('header.user.login')
           li
-            a href='#' = 'Logout'
+            a href='#' = t('header.user.logout')
 
     ul.left
       li class="#{current_page?(root_path) ? 'active' : ''}"
-        a href='#' = 'Home'
+        a href='#' = t('header.home')
