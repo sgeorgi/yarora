@@ -2,7 +2,7 @@ de:
   header:
     home: 'Startseite'
     title: "Yet another Ruby on Rails Application"
-
+    shorttitle: "YaRoRA"
     menu: 'Menü'
     user:
       title: 'Benutzer'
