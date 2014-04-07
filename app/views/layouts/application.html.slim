@@ -17,6 +17,16 @@ html ng-app="yarora"
     #content
       .row
         .large-12.columns
+          - if flash[:notice]
+            .alert-box.info[data-alert]
+              = flash[:notice]
+              a.close href='#'= 'x';
+          - if flash[:warn]
+            .alert-box.warning[data-alert]
+              = flash[:warn]
+              a.close href='#'= 'x';
+      .row
+        .large-12.columns
           = yield
     = javascript_include_tag 'application'
     = render 'layouts/footer'
