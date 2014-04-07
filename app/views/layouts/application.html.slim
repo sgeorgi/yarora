@@ -12,7 +12,9 @@ html ng-app="yarora"
 
   body
     = render 'layouts/top_bar'
-    = content_for(:header_picture)
+    .hide-for-small
+      .row.full
+        = image_tag 'title.jpg', size: '2000x200'
 
     #content
       .row
