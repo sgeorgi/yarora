@@ -35,6 +35,7 @@ group :development, :test do
   gem 'rspec-rails', '~> 3.0.0.beta'
   gem 'simplecov', require: false, group: :test
   gem 'factory_girl_rails'
+  gem 'inch'
 end
 
 group :test do
