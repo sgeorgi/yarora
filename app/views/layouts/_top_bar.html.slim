@@ -2,7 +2,7 @@ nav.top-bar[data-topbar]
   ul.title-area
     li.name
       h1
-        a href="#" = t('header.title')
+        =link_to t('header.title'), root_path
     li.toggle-topbar.menu-icon
       a href='#' = t('header.menu')
 
@@ -23,4 +23,6 @@ nav.top-bar[data-topbar]
 
     ul.left
       li class="#{current_page?(root_path) ? 'active' : ''}"
-        a href='#' = t('header.home')
+        =link_to t('header.home'), root_path
+      li class="#{current_page?(features_path) ? 'active' : ''}"
+        =link_to t('header.features'), features_path

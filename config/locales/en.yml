@@ -7,6 +7,7 @@ en:
       title: 'User'
       login: 'Login'
       logout: 'Logout'
+    features: "Features"
   features:
     feature_a: 'Feature A'
     feature_a_desc: 'Mega nice feature'

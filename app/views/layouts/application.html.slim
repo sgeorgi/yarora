@@ -12,6 +12,9 @@ html ng-app="yarora"
 
   body
     = render 'layouts/top_bar'
-    = yield
+    = content_for(:header_picture)
+
+    #content
+      = yield
     = javascript_include_tag 'application'
     = render 'layouts/footer'

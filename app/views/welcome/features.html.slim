@@ -1,8 +1,6 @@
-.row.full
-  = image_tag 'title.jpg', size: '2000x300'
-  br
-  br
-  br
+- content_for(:header_picture) do
+  .row.full
+    = image_tag 'title.jpg', size: '2000x200'
 
 .row.feature
   .large-4.columns.text-center

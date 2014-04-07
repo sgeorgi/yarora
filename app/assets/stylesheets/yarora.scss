@@ -1,5 +1,9 @@
 .row.full {
   max-width: 100%;
+
+  img {
+    height: 250px;
+  }
 }
 
 .row.feature {
@@ -20,6 +24,6 @@
   line-height: 25px;
 }
 
-div {
-//  border: 1px solid black;
+#content {
+  padding-top: 10px;
 }

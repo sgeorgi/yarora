@@ -5,6 +5,8 @@ Yarora::Application.routes.draw do
   # You can have the root of your site routed with "root"
   root 'welcome#index'
 
+  get 'features' => 'welcome#features', as: :features
+
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
 

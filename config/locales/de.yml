@@ -7,6 +7,7 @@ de:
       title: 'Benutzer'
       login: 'Anmelden'
       logout: 'Abmelden'
+    features: "Features"
   features:
     feature_a: 'Feature A'
     feature_a_desc: 'Mega tolles Feature'
