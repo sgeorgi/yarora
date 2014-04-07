@@ -2,9 +2,10 @@ doctype html
 html ng-app="yarora"
   head
     title
-      =content_for(:title) ? yield(:title) : Yet another Ruby on Rails Application
+      =content_for(:title) ? yield(:title) : 'Yet another Ruby on Rails Application'
     meta http-equiv="Content-type" content="text/html; charset=utf-8"
     meta name="viewport" content="width=device-width, initial-scale=1.0"
+    = favicon_link_tag 'favicon.ico'
     = csrf_meta_tags
     = stylesheet_link_tag 'application', media: :all
     = javascript_include_tag 'vendor/modernizr'

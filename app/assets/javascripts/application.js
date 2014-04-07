@@ -17,5 +17,5 @@
 //= require_self
 //= require_tree .
 
-angular.module('yarora', ['ngResource']);
+angular.module('yarora', []);
 $(function(){ $(document).foundation(); });
