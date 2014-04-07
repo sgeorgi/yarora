@@ -38,4 +38,7 @@ end
 
 group :test do
   gem 'database_cleaner'
+  gem 'launchy'
+  gem 'capybara', '2.2.0'
 end
+

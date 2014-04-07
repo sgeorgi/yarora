@@ -8,6 +8,13 @@ nav.top-bar[data-topbar]
 
   section.top-bar-section
     ul.right
+      li
+        a id='locale_de' href="#{url_for( :locale => 'de' )}"
+          = image_tag 'de.png'
+      li
+        a id='locale_en' href="#{url_for( :locale => 'en' )}"
+          = image_tag 'us.png'
+      li.divider
       li.has-dropdown
         a href='#' = t('header.user.title')
         ul.dropdown
