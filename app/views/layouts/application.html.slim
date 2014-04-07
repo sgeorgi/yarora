@@ -15,6 +15,8 @@ html ng-app="yarora"
     = content_for(:header_picture)
 
     #content
-      = yield
+      .row
+        .large-12.columns
+          = yield
     = javascript_include_tag 'application'
     = render 'layouts/footer'
