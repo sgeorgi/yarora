@@ -16,6 +16,5 @@ class WelcomeController < ApplicationController
   # @return the index page
   #
   def index
-    puts flash[:warn]
   end
 end
