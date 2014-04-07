@@ -1,7 +1,8 @@
 de:
   header:
     home: 'Startseite'
-    title: 'YaRoRA'
+    title: "Yet another Ruby on Rails Application"
+
     menu: 'Menü'
     user:
       title: 'Benutzer'
