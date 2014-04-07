@@ -24,6 +24,7 @@ nav.top-bar[data-topbar]
               a href='#' = t('header.user.logout')
 
     ul.left
+      li.divider
       li class="#{current_page?(root_path) ? 'active' : ''}"
         =link_to t('header.home'), root_path
       - if feature_on?(:feature_page)
