@@ -11,5 +11,7 @@ html ng-app="yarora"
     = javascript_include_tag 'vendor/modernizr'
 
   body
+    = render 'layouts/top_bar'
+
     = yield
     = javascript_include_tag 'application'
