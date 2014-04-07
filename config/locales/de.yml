@@ -2,7 +2,15 @@ de:
   header:
     home: 'Startseite'
     title: 'YaRoRA'
+    menu: 'Menü'
     user:
       title: 'Benutzer'
       login: 'Anmelden'
       logout: 'Abmelden'
+  features:
+    feature_a: 'Feature A'
+    feature_a_desc: 'Mega tolles Feature'
+    feature_b: 'Feature B'
+    feature_b_desc: 'Super tolles Feature'
+    feature_c: 'Feature C'
+    feature_c_desc: 'Ultra tolles Feature'

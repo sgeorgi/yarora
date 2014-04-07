@@ -2,6 +2,24 @@
   max-width: 100%;
 }
 
+.row.feature {
+  img {
+    width: 400px;
+    height: 200px;
+  }
+}
+
+.footy {
+  background-color: #333333;
+  color: white;
+  height: 30px;
+  widows: 100%;
+  position: fixed;
+  bottom: 0px;
+  left: 0px;
+  line-height: 25px;
+}
+
 div {
 //  border: 1px solid black;
 }

@@ -2,8 +2,15 @@ en:
   header:
     home: 'Home'
     title: 'YaRoRA'
+    menu: 'Menu'
     user:
       title: 'User'
       login: 'Login'
       logout: 'Logout'
-
+  features:
+    feature_a: 'Feature A'
+    feature_a_desc: 'Mega nice feature'
+    feature_b: 'Feature B'
+    feature_b_desc: 'Super nifty feature'
+    feature_c: 'Feature C'
+    feature_c_desc: 'Ultra sleazy feature'

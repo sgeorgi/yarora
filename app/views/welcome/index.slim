@@ -4,25 +4,24 @@
   br
   br
 
-.row
+.row.feature
   .large-4.columns.text-center
     h1
-      small= 'Feature A'
-    img src="http://placehold.it/400x200&text=[ img a ]"
+      small= t('features.feature_a')
+    = image_tag 'feature_a.jpg'
     p
-      small
-        | Super wow description, really super wow feature. Much feature, so WOW!
+      small= t('features.feature_a_desc')
+
   .large-4.columns.text-center
     h1
-      small= 'Feature B'
-    img src="http://placehold.it/400x200&text=[ img b ]"
+      small= t('features.feature_b')
+    = image_tag 'feature_b.jpg'
     p
-      small
-        | Super wow description, really super wow feature. Much feature, so WOW!
+      small= t('features.feature_b_desc')
+
   .large-4.columns.text-center
     h1
-      small= 'Feature C'
-    img src="http://placehold.it/400x200&text=[ img c ]"
+      small= t('features.feature_c')
+    = image_tag 'feature_c.jpg'
     p
-      small
-        | Super wow description, really super wow feature. Much feature, so WOW!
+      small= t('features.feature_c_desc')
