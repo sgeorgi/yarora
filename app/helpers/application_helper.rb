@@ -17,8 +17,12 @@ module ApplicationHelper
   end
 
   #
-  # Checks if given Feature is active
-  # @params [Symbol] feature to check
+  # Checks if given Feature is active by consulting the FeatureToggle module.
+  #
+  # @example
+  #   feature_on?(:super_feature) # => true
+  #
+  # @params _feature [Symbol] feature to check
   # @return [Boolean] feature toggle's state
   #
   def feature_on?(_feature)
@@ -26,8 +30,12 @@ module ApplicationHelper
   end
 
   #
-  # Checks if given Feature is inactive
-  # @params [Symbol] feature to check
+  # Checks if given Feature is inactive by consulting the FeatureToggle module.
+  #
+  # @example
+  #   feature_off?(:super_feature) # => false
+  #
+  # @params _feature [Symbol] feature to check
   # @return [Boolean] feature toggle's state
   #
   def feature_off?(_feature)

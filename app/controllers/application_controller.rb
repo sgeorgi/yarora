@@ -1,3 +1,6 @@
+#
+# Main Application Controller
+#
 class ApplicationController < ActionController::Base
   # Prevent CSRF attacks by raising an exception.
   # For APIs, you may want to use :null_session instead.
@@ -5,6 +8,10 @@ class ApplicationController < ActionController::Base
 
   before_action :set_locale
 
+  #
+  # Sets the locale, either by retrieving params[:local], setting/reading session[:locale]
+  # or the default I18n.locale
+  #
   def set_locale
     if params[:locale]
       I18n.locale = session[:locale] = params[:locale] || I18n.default_locale
