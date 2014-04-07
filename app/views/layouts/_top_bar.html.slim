@@ -19,9 +19,9 @@ nav.top-bar[data-topbar]
           a href='#' = t('header.user.title')
           ul.dropdown
             li
-              a href='#' = t('header.user.login')
+              =link_to t('header.user.login'), new_user_session_path
             li
-              a href='#' = t('header.user.logout')
+              =link_to t('header.user.logout'), destroy_user_session_path, method: :delete
 
     ul.left
       li.divider

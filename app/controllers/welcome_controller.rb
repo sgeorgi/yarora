@@ -3,6 +3,8 @@
 #
 class WelcomeController < ApplicationController
 
+  before_action :authenticate_user!, only: [:features]
+
   #
   # GET features/ (features_path)
   # @return the feature page
