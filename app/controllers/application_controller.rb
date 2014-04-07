@@ -11,6 +11,7 @@ class ApplicationController < ActionController::Base
   #
   # Sets the locale, either by retrieving params[:local], setting/reading session[:locale]
   # or the default I18n.locale
+  # @return nothing
   #
   def set_locale
     if params[:locale]

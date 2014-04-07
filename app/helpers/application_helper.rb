@@ -3,6 +3,7 @@ module ApplicationHelper
 
   #
   # Displays the alternate locale icon of the already enabled locale
+  # @return a link_tag for changing locale
   #
   def locale_switch
     _locale = I18n.locale
@@ -22,7 +23,7 @@ module ApplicationHelper
   # @example
   #   feature_on?(:super_feature) # => true
   #
-  # @params _feature [Symbol] feature to check
+  # @param _feature [String] the feature to check
   # @return [Boolean] feature toggle's state
   #
   def feature_on?(_feature)
@@ -35,7 +36,7 @@ module ApplicationHelper
   # @example
   #   feature_off?(:super_feature) # => false
   #
-  # @params _feature [Symbol] feature to check
+  # @param _feature [Symbol] feature to check
   # @return [Boolean] feature toggle's state
   #
   def feature_off?(_feature)
