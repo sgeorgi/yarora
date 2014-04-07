@@ -1,4 +1,4 @@
 test_feature: true
-feature_page: false
+feature_page: true
 locale_switcher: true
 user_login: false
