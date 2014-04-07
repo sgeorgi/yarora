@@ -10,11 +10,7 @@ nav.top-bar[data-topbar]
     ul.right
       - if FeatureToggle::on?(:locale_switcher)
         li
-          a id='locale_de' href="#{url_for( :locale => 'de' )}"
-            = image_tag 'de.png'
-        li
-          a id='locale_en' href="#{url_for( :locale => 'en' )}"
-            = image_tag 'us.png'
+          = locale_switch
       - if FeatureToggle::on?(:user_login)
         li.divider
         li.has-dropdown

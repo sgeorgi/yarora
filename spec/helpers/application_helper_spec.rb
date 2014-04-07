@@ -20,4 +20,8 @@ describe ApplicationHelper do
       expect(feature_off?(:undefined)).to be(true)
     end
   end
+
+  describe '#locale_switch' do
+    pending 'ActionController::UrlGenerationError: No route matches {:locale=>"en"}'
+  end
 end
