@@ -8,17 +8,26 @@ describe 'layouts/_top_bar.html.slim' do
     expect { render }.not_to raise_error
   end
 
-  pending 'write me' do
-    it 'shows a link to login' do
-    end
+  it 'shows a link to login' do
+    render
+    expect(rendered).to include(I18n.t('header.user.login'))
+  end
 
-    it 'does not show the login link when logged in' do
-    end
+  it 'does not show the login link when logged in' do
+    allow(view).to receive(:user_signed_in?).and_return(true)
+    render
+    expect(rendered).not_to include(I18n.t('header.user.login'))
+  end
 
-    it 'shows a link to logout when logged in' do
-    end
+  it 'shows a link to logout when logged in' do
+    allow(view).to receive(:user_signed_in?).and_return(true)
+    render
+    expect(rendered).to include(I18n.t('header.user.logout'))
+  end
 
-    it 'does not show a link to logout when not logged in' do
-    end
+  it 'does not show a link to logout when not logged in' do
+    allow(view).to receive(:user_signed_in?).and_return(false)
+    render
+    expect(rendered).not_to include(I18n.t('header.user.logout'))
   end
 end
