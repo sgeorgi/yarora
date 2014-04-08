@@ -1,31 +1,36 @@
-h2= t('edit')
+h2= t('devise.ui.edit_user')
   = resource_name.to_s.humanize
 = form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f|
   = devise_error_messages!
-  div
-    = f.label :email
-    br
-    = f.email_field :email, autofocus: true
+  .row
+    .large-6.columns
+      = f.label :email
+      = f.email_field :email, autofocus: true
+
   - if devise_mapping.confirmable? && resource.pending_reconfirmation?
-    div
-      | Currently waiting confirmation for: 
-      = resource.unconfirmed_email
-  div
-    = f.label :password
-    i= t('devise.ui.leave_blank')
-    br
-    = f.password_field :password, autocomplete: "off"
-  div
-    = f.label :password_confirmation
-    br
-    = f.password_field :password_confirmation, autocomplete: "off"
-  div
-    = f.label :current_password
-    i= t('devise.ui.current_password')
-    br
-    = f.password_field :current_password, autocomplete: "off"
-  div
-    = f.submit t('update')
+    .row
+      .large-6.columns
+        | Currently waiting confirmation for:
+        = resource.unconfirmed_email
+  .row
+    .large-6.columns
+      = f.label :password
+      small
+        i= t('devise.ui.leave_blank')
+      = f.password_field :password, autocomplete: 'off'
+  .row
+    .large-6.columns
+      = f.label :password_confirmation
+      = f.password_field :password_confirmation, autocomplete: 'off'
+  .row
+    .large-6.columns
+      = f.label :current_password
+      small
+        i= t('devise.ui.current_password')
+      = f.password_field :current_password, autocomplete: 'off'
+  .row
+    .large-6.columns
+      = f.submit t('update'), class: 'button expand'
 br
-= button_to t('devise.ui.cancel_account'), registration_path(resource_name), data: { confirm: t('are_you_sure') }, method: :delete
+= button_to t('devise.ui.cancel_account'), registration_path(resource_name), data: { confirm: t('are_you_sure') }, method: :delete, class: 'button alert'
 = link_to t('back'), :back

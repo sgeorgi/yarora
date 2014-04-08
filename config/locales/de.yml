@@ -31,6 +31,7 @@ de:
       change_your_password: 'Kennwort ändern'
       forgot_your_password: 'Kennwort vergessen?'
       send_reset_link: 'Nachricht zur Kennwortrücksetzung schicken'
+      edit_user: 'Registrierung bearbeiten'
 
   activerecord:
       models:
@@ -41,6 +42,7 @@ de:
           password: 'Kennwort'
           password_confirmation: 'Kennwortbestätigung'
           remember_me: 'Anmeldedaten merken?'
+          current_password: 'Aktuelles Kennwort'
       errors:
         models:
           user:
@@ -49,6 +51,8 @@ de:
                 too_short: 'ist zu kurz!'
               password_confirmation:
                 confirmation: 'stimmt nicht überein!'
+              current_password:
+                blank: 'ist leer!'
 
 
   edit: 'Bearbeiten'

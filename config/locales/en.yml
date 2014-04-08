@@ -31,7 +31,7 @@ en:
       change_your_password: 'Change password'
       forgot_your_password: 'Forgot your password?'
       send_reset_link: 'Send me reset password instructions'
-
+      edit_user: 'Edit registration'
 
   activerecord:
     attributes:
@@ -40,6 +40,7 @@ en:
         password: 'Password'
         password_confirmation: 'Password confirmation'
         remember_me: 'Remember me?'
+        current_password: 'Current password'
     errors:
       models:
         user:
@@ -48,6 +49,8 @@ en:
               too_short: 'is too short!'
             password_confirmation:
               confirmation: 'does not match!'
+            current_password:
+              blank: 'not given!'
 
   edit: 'Edit'
   update: 'Update'
