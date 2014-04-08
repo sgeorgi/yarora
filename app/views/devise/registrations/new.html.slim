@@ -8,11 +8,11 @@ h2= t('devise.ui.sign_up')
   div
     = f.label :password
     br
-    = f.password_field :password, autocomplete: "off"
+    = f.password_field :password, autocomplete: 'off'
   div
     = f.label :password_confirmation
     br
-    = f.password_field :password_confirmation, autocomplete: "off"
+    = f.password_field :password_confirmation, autocomplete: 'off'
   div
     = f.submit t('devise.ui.sign_up')
-= render "devise/shared/links"
+= render 'devise/shared/links'

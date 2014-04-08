@@ -28,9 +28,9 @@ html ng-app="yarora"
               = flash[:warn]
               a.close href='#'= 'x';
           - if flash[:alert]
-              .alert-box.warning[data-alert]
-                = flash[:alert]
-                a.close href='#'= 'x';
+            .alert-box.warning[data-alert]
+              = flash[:alert]
+              a.close href='#'= 'x';
       .row
         .large-12.columns
           = yield

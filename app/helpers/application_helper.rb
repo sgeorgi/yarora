@@ -13,6 +13,8 @@ module ApplicationHelper
                       'de'
                     when :de
                       'en'
+                    else
+
                   end
 
     link_to image_tag("#{_new_locale}.png"), url_for(locale: _new_locale)
