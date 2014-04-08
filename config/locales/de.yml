@@ -16,3 +16,42 @@ de:
     feature_b_desc: 'Super tolles Feature'
     feature_c: 'Feature C'
     feature_c_desc: 'Ultra tolles Feature'
+
+  devise:
+    ui:
+      sign_in: 'Anmelden'
+      sign_out: 'Abmelden'
+      sign_up: 'Registrieren'
+      forgot_password: 'Kennwort vergessen?'
+      no_confimation_mail: 'Keine Emailbestätigung erhalten?'
+      no_unlock_instructions: 'Keine Freischaltinstruktionen erhalten?'
+      leave_blank: '(leer lassen, wenn es nicht geändert werden soll)'
+      current_password: '(das aktuelle Kennwort wird für die Speicherung der Änderungen benötigt)'
+      cancel_account: 'Benutzerkonto löschen'
+      change_your_password: 'Kennwort ändern'
+      forgot_your_password: 'Kennwort vergessen?'
+      send_reset_link: 'Nachricht zur Kennwortrücksetzung schicken'
+
+  activerecord:
+      models:
+        user: 'Benutzer'
+      attributes:
+        user:
+          email: 'E-Mail-Adresse'
+          password: 'Kennwort'
+          password_confirmation: 'Kennwortbestätigung'
+          remember_me: 'Anmeldedaten merken?'
+      errors:
+        models:
+          user:
+            attributes:
+              password:
+                too_short: 'ist zu kurz!'
+              password_confirmation:
+                confirmation: 'stimmt nicht überein!'
+
+
+  edit: 'Bearbeiten'
+  update: 'Aktualisieren'
+  are_you_sure: 'sind Sie sicher?'
+  back: 'Zurück'

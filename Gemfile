@@ -35,12 +35,11 @@ group :development, :test do
   gem 'rspec-rails', '~> 3.0.0.beta2'
   gem 'simplecov', require: false, group: :test
   gem 'factory_girl_rails'
-  gem 'inch'
 end
 
 group :test do
   gem 'database_cleaner'
   gem 'launchy'
-  gem 'capybara', '2.2.0'
+  gem 'capybara', '2.2.1'
 end
 
