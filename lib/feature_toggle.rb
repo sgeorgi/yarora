@@ -9,7 +9,7 @@ module FeatureToggle
   # @example
   #  FeatureToggle.on?(:super_feature) => false
   # 
-  # @param _feat [String or Symbol] feature identifier
+  # @param [String or Symbol] _feat feature identifier
   # @return [Boolean] toggle state
   #
   def self.on?(_feat)
@@ -23,7 +23,7 @@ module FeatureToggle
   # @example
   #  FeatureToggle.on?(:super_feature) => true
   # 
-  # @param _feat [String or Symbol] feature identifier
+  # @param [String or Symbol] _feat feature identifier
   # @return [Boolean] toggle state
   #
   def self.off?(_feat)
