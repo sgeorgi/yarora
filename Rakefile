@@ -4,3 +4,6 @@
 require File.expand_path('../config/application', __FILE__)
 
 Yarora::Application.load_tasks
+
+require 'inch/rake'
+Inch::Rake::Suggest.new
