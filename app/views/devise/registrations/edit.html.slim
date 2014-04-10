@@ -10,7 +10,7 @@ h2= t('devise.ui.edit_user')
   - if devise_mapping.confirmable? && resource.pending_reconfirmation?
     .row
       .large-6.columns
-        | Currently waiting confirmation for:
+        = t('devise.ui.waiting_for_confirmation')
         = resource.unconfirmed_email
   .row
     .large-6.columns

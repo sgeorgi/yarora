@@ -32,6 +32,7 @@ de:
       forgot_your_password: 'Kennwort vergessen?'
       send_reset_link: 'Nachricht zur Kennwortrücksetzung schicken'
       edit_user: 'Registrierung bearbeiten'
+      waiting_for_confirmation: 'Warte auf Bestätigung der Emailadresse:'
 
   activerecord:
       models:

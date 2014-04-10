@@ -32,6 +32,8 @@ en:
       forgot_your_password: 'Forgot your password?'
       send_reset_link: 'Send me reset password instructions'
       edit_user: 'Edit registration'
+      waiting_for_confirmation: 'Currently waiting confirmation for:'
+
 
   activerecord:
     attributes:

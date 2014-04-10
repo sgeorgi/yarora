@@ -1,18 +1,25 @@
 h2= t('devise.ui.sign_up')
 = form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f|
   = devise_error_messages!
-  div
-    = f.label :email
-    br
-    = f.email_field :email, autofocus: true
-  div
-    = f.label :password
-    br
-    = f.password_field :password, autocomplete: 'off'
-  div
-    = f.label :password_confirmation
-    br
-    = f.password_field :password_confirmation, autocomplete: 'off'
-  div
-    = f.submit t('devise.ui.sign_up')
+  .row
+    .large-6.columns
+      = f.label :email
+      = f.email_field :email, autofocus: true
+    .large-6.columns
+  .row
+    .large-6.columns
+      = f.label :password
+      = f.password_field :password, autocomplete: 'off'
+    .large-6.columns
+  .row
+    .large-6.columns
+      = f.label :password_confirmation
+      = f.password_field :password_confirmation, autocomplete: 'off'
+    .large-6.columns
+  .row
+    .large-6.columns
+      = f.submit t('devise.ui.sign_up'), class: 'button expand'
+    .large-6.columns
+br
+
 = render 'devise/shared/links'
