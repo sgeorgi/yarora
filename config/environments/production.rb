@@ -11,7 +11,7 @@ Yarora::Application.configure do
   config.eager_load = true
 
   # Full error reports are disabled and caching is turned on.
-  config.consider_all_requests_local       = false
+  config.consider_all_requests_local = false
   config.action_controller.perform_caching = true
 
   # Enable Rack::Cache to put a simple HTTP cache in front of your application
@@ -77,4 +77,16 @@ Yarora::Application.configure do
 
   # Use default logging formatter so that PID and timestamp are not suppressed.
   config.log_formatter = ::Logger::Formatter.new
+
+  config.action_mailer.default_url_options = { host: 'yarora.sgeorgi.de', port: 80 }
+  config.action_mailer.delivery_method = :smtp
+  config.action_mailer.smtp_settings = {
+    address: ENV['SMTP_HOST'],
+    port: 587,
+    domain: ENV['DOMAIN'],
+    user_name: ENV['SMTP_USER'],
+    password: ENV['SMTP_PASS'],
+    authentication: :login,
+    enable_starttls_auto: true
+  }
 end
