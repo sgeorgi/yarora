@@ -36,6 +36,7 @@ group :development, :test do
   gem 'simplecov', require: false, group: :test
   gem 'factory_girl_rails'
   gem 'mailcatcher'
+  gem 'faker'
 end
 
 group :test do

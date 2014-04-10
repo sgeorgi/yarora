@@ -48,4 +48,10 @@ RSpec.configure do |config|
   config.after(:each) do
     DatabaseCleaner.clean
   end
+
+  config.before(type: :feature, devise_feature: true) do
+    email = 'test@test.com'
+    password = 'ABC123xyz!!'
+    create :confirmed_user, email: email, password: password
+  end
 end
