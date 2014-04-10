@@ -23,6 +23,8 @@ nav.top-bar[data-topbar]
                 =link_to t('header.user.login'), new_user_session_path
             - if user_signed_in?
               li
+                =link_to t('header.user.profile'), edit_user_registration_path
+              li
                 =link_to t('header.user.logout'), destroy_user_session_path, method: :delete
 
     ul.left

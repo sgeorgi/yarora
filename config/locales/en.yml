@@ -8,6 +8,7 @@ en:
       title: 'User'
       login: 'Login'
       logout: 'Logout'
+      profile: 'Profile'
     features: "Features"
   features:
     feature_a: 'Feature A'

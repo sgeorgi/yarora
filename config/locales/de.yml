@@ -8,6 +8,7 @@ de:
       title: 'Benutzer'
       login: 'Anmelden'
       logout: 'Abmelden'
+      profile: 'Benutzerprofil'
     features: "Features"
   features:
     feature_a: 'Feature A'
