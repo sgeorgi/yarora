@@ -2,10 +2,10 @@ source 'https://rubygems.org'
 ruby '2.1.1'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
-gem 'rails', '4.0.4'
+gem 'rails', '4.1.0'
 gem 'pg'
-gem 'sass-rails', '~> 4.0.2'
-gem 'coffee-rails', '~> 4.0.0'
+gem 'sass-rails', '~> 4.0.3'
+gem 'coffee-rails', '~> 4.0.1'
 gem 'uglifier', '>= 1.3.0'
 
 gem 'jquery-rails'
@@ -32,7 +32,7 @@ end
 # gem 'debugger', group: [:development, :test]
 
 group :development, :test do
-  gem 'rspec-rails', '~> 3.0.0.beta'
+  gem 'rspec-rails', '~> 3.0.0.beta2'
   gem 'simplecov', require: false, group: :test
   gem 'factory_girl_rails'
   gem 'inch'
