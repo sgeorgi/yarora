@@ -9,6 +9,8 @@ en:
       login: 'Login'
       logout: 'Logout'
       profile: 'Profile'
+      signup: 'Register'
+
     features: "Features"
   features:
     feature_a: 'Feature A'

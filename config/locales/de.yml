@@ -9,6 +9,7 @@ de:
       login: 'Anmelden'
       logout: 'Abmelden'
       profile: 'Benutzerprofil'
+      signup: 'Registrierung'
     features: "Features"
   features:
     feature_a: 'Feature A'
