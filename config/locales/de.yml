@@ -33,6 +33,7 @@ de:
       send_reset_link: 'Nachricht zur Kennwortrücksetzung schicken'
       edit_user: 'Registrierung bearbeiten'
       waiting_for_confirmation: 'Warte auf Bestätigung der Emailadresse:'
+      resend_cofirmation: "Bestätigungslink erneut verschicken"
 
   activerecord:
       models:

@@ -1,11 +1,14 @@
-h2
-  | Resend confirmation instructions
+h2= t('devise.ui.resend_cofirmation')
 = form_for(resource, as: resource_name, url: confirmation_path(resource_name), html: { method: :post }) do |f|
   = devise_error_messages!
-  div
-    = f.label :email
-    br
-    = f.email_field :email, autofocus: true
-  div
-    = f.submit 'Resend confirmation instructions'
+  .row
+    .large-6.columns
+      = f.label :email
+      = f.email_field :email, autofocus: true
+    .large-6.columns
+  .row
+    .large-6.columns
+      = f.submit t('devise.ui.resend_cofirmation'), class: 'button expand'
+    .large-6.columns
+br
 = render 'devise/shared/links'

@@ -33,7 +33,7 @@ en:
       send_reset_link: 'Send me reset password instructions'
       edit_user: 'Edit registration'
       waiting_for_confirmation: 'Currently waiting confirmation for:'
-
+      resend_cofirmation: "Resend confirmation instruction"
 
   activerecord:
     attributes:
