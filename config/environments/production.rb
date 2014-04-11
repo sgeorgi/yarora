@@ -82,8 +82,8 @@ Yarora::Application.configure do
   config.action_mailer.delivery_method = :smtp
   config.action_mailer.smtp_settings = {
     address: ENV['SMTP_HOST'],
-    port: 465,
-    domain: ENV['DOMAIN'],
+    port: ENV['SMTP_PORT'],
+    domain: ENV['SMTP_DOMAIN'],
     user_name: ENV['SMTP_USER'],
     password: ENV['SMTP_PASS'],
     authentication: :login,
