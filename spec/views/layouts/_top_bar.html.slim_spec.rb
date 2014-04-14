@@ -13,34 +13,68 @@ describe 'layouts/_top_bar.html.slim' do
     expect(rendered).to include(I18n.t('header.user.login'))
   end
 
-  it 'does not show the login link when logged in' do
+  it 'shows a link to admin login' do
+    render
+    expect(rendered).to include(I18n.t('header.user.admin_login'))
+  end
+
+  it 'does not show the login link when logged in as user' do
     allow(view).to receive(:user_signed_in?).and_return(true)
     render
     expect(rendered).not_to include(I18n.t('header.user.login'))
+    expect(rendered).not_to include(I18n.t('header.user.admin_login'))
   end
 
-  it 'shows a link to logout when logged in' do
+  it 'does not show the login link when logged in as admin user' do
+    allow(view).to receive(:admin_user_signed_in?).and_return(true)
+    render
+    expect(rendered).not_to include(I18n.t('header.user.login'))
+    expect(rendered).not_to include(I18n.t('header.user.admin_login'))
+  end
+
+  it 'shows a link to logout when logged in as user' do
     allow(view).to receive(:user_signed_in?).and_return(true)
     render
     expect(rendered).to include(I18n.t('header.user.logout'))
   end
 
-  it 'does not show a link to logout when not logged in' do
+  it 'shows a link to logout when logged in as admin user' do
+    allow(view).to receive(:admin_user_signed_in?).and_return(true)
+    render
+    expect(rendered).to include(I18n.t('header.user.admin_logout'))
+  end
+
+  it 'does not show a link to logout when not logged in as user' do
     allow(view).to receive(:user_signed_in?).and_return(false)
     render
     expect(rendered).not_to include(I18n.t('header.user.logout'))
+    expect(rendered).not_to include(I18n.t('header.user.admin_logout'))
+  end
+
+  it 'does not show a link to logout when not logged in as admin user' do
+    allow(view).to receive(:admin_user_signed_in?).and_return(false)
+    render
+    expect(rendered).not_to include(I18n.t('header.user.logout'))
+    expect(rendered).not_to include(I18n.t('header.user.admin_logout'))
   end
 
   it 'does not show a link to profile when not logged in' do
     allow(view).to receive(:user_signed_in?).and_return(false)
     render
     expect(rendered).not_to include(I18n.t('header.user.profile'))
+    expect(rendered).not_to include(I18n.t('header.user.admin_profile'))
   end
 
-  it 'does show a link to profile when logged in ' do
+  it 'does show a link to profile when logged in as user' do
     allow(view).to receive(:user_signed_in?).and_return(true)
     render
     expect(rendered).to include(I18n.t('header.user.profile'))
+  end
+
+  it 'does show a link to profile when logged in as admin user' do
+    allow(view).to receive(:admin_user_signed_in?).and_return(true)
+    render
+    expect(rendered).to include(I18n.t('header.user.admin_profile'))
   end
 
   it 'does show a link to signup when not logged in' do

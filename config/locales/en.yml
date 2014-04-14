@@ -6,9 +6,13 @@ en:
     menu: 'Menu'
     user:
       title: 'User'
+      admin_title: 'Admin'
       login: 'Login'
+      admin_login: 'Admin Login'
       logout: 'Logout'
+      admin_logout: 'Admin Logout'
       profile: 'Profile'
+      admin_profile: 'Admin Profile'
       signup: 'Register'
 
     features: "Features"
@@ -46,9 +50,23 @@ en:
         password_confirmation: 'Password confirmation'
         remember_me: 'Remember me?'
         current_password: 'Current password'
+      admin_user:
+        email: 'Email-address'
+        password: 'Password'
+        password_confirmation: 'Password confirmation'
+        remember_me: 'Remember me?'
+        current_password: 'Current password'
     errors:
       models:
         user:
+          attributes:
+            password:
+              too_short: 'is too short!'
+            password_confirmation:
+              confirmation: 'does not match!'
+            current_password:
+              blank: 'not given!'
+        admin_user:
           attributes:
             password:
               too_short: 'is too short!'

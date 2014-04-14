@@ -15,19 +15,32 @@ nav.top-bar[data-topbar]
           = locale_switch
       - if feature_on?(:user_login)
         li.divider
-        li.has-dropdown
-          a href='#' = t('header.user.title')
-          ul.dropdown
-            - if not user_signed_in?
-              li
-                =link_to t('header.user.login'), new_user_session_path
-              li
-                =link_to t('header.user.signup'), new_user_registration_path
-            - if user_signed_in?
-              li
-                =link_to t('header.user.profile'), edit_user_registration_path
-              li
-                =link_to t('header.user.logout'), destroy_user_session_path, method: :delete
+        - if not admin_user_signed_in?
+          li.has-dropdown
+            a href='#' = t('header.user.title')
+            ul.dropdown
+              - if not user_signed_in?
+                li
+                  =link_to t('header.user.login'), new_user_session_path
+                li
+                  =link_to t('header.user.signup'), new_user_registration_path
+              - if user_signed_in?
+                li
+                  =link_to t('header.user.profile'), edit_user_registration_path
+                li
+                  =link_to t('header.user.logout'), destroy_user_session_path, method: :delete
+        - if not user_signed_in?
+          li.has-dropdown
+            a href='#' = t('header.user.admin_title')
+            ul.dropdown
+              - if not admin_user_signed_in?
+                li
+                  =link_to t('header.user.admin_login'), new_admin_user_session_path
+              - if admin_user_signed_in?
+                li
+                  =link_to t('header.user.admin_profile'), edit_admin_user_registration_path
+                li
+                  =link_to t('header.user.admin_logout'), destroy_admin_user_session_path, method: :delete
 
     ul.left
       li.divider

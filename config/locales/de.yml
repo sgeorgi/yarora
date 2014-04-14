@@ -6,9 +6,13 @@ de:
     menu: 'Menü'
     user:
       title: 'Benutzer'
+      admin_title: 'Administrator'
       login: 'Anmelden'
+      admin_login: 'Administrator Anmeldung'
       logout: 'Abmelden'
+      admin_logout: 'Administrator Abmelden'
       profile: 'Benutzerprofil'
+      admin_profile: 'Administratorprofil'
       signup: 'Registrierung'
     features: "Features"
   features:
@@ -40,8 +44,15 @@ de:
   activerecord:
       models:
         user: 'Benutzer'
+        admin_user: 'Administrator'
       attributes:
         user:
+          email: 'E-Mail-Adresse'
+          password: 'Kennwort'
+          password_confirmation: 'Kennwortbestätigung'
+          remember_me: 'Anmeldedaten merken?'
+          current_password: 'Aktuelles Kennwort'
+        admin_user:
           email: 'E-Mail-Adresse'
           password: 'Kennwort'
           password_confirmation: 'Kennwortbestätigung'
@@ -50,6 +61,14 @@ de:
       errors:
         models:
           user:
+            attributes:
+              password:
+                too_short: 'ist zu kurz!'
+              password_confirmation:
+                confirmation: 'stimmt nicht überein!'
+              current_password:
+                blank: 'ist leer!'
+          admin_user:
             attributes:
               password:
                 too_short: 'ist zu kurz!'
