@@ -8,13 +8,21 @@ Currently implemented features:
 * RSpec 3.0.0.beta2
 * Sass/Coffeescript
 * Layout is bootstrapped (hahaha!) with Foundation 5
+
 * User login and self-registration via Devise
+* AdminUser login via Devise
+* ActiveAdmin
+  * User management
+
 * A feature-toggling mechanism to quickly enable or disable features in Views/Controllers (currently via YAML-config)
 * All gems are up-to-date
 
-Features already planned:
 
-* User administration via Admin-Role
+== Development
+
+ActionMailer is configured to send to localhost on port 2025. You can easily intercept outgoing emails with *mailcatcher*:
+
+  mailcatcher --smtp-port 2025
 
 ---
 
