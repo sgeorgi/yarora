@@ -15,7 +15,6 @@
 //= require foundation
 //= require angular
 //= require_self
-//= require_tree .
 
 angular.module('yarora', []);
 $(function(){ $(document).foundation(); });

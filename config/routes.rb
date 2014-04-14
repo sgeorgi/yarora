@@ -1,6 +1,7 @@
 Yarora::Application.routes.draw do
-  devise_for :admin_users
+  devise_for :admin_users, ActiveAdmin::Devise.config
   devise_for :users
+  ActiveAdmin.routes(self)
 
   root 'welcome#index'
   get 'features' => 'welcome#features', as: :features

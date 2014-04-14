@@ -1,4 +1,10 @@
 de:
+  time:
+    am: vormittags
+    formats:
+      default: ! '%A, %d. %B %Y, %H:%M Uhr'
+      long: ! '%d.%m.%Y, %H:%M Uhr'
+      short: ! '%d. %B, %H:%M Uhr'
   header:
     home: 'Startseite'
     title: "Yet another Ruby on Rails Application"
@@ -6,7 +12,7 @@ de:
     menu: 'Menü'
     user:
       title: 'Benutzer'
-      admin_title: 'Administrator'
+      admin_title: 'Admin'
       login: 'Anmelden'
       admin_login: 'Administrator Anmeldung'
       logout: 'Abmelden'
