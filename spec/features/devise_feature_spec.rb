@@ -31,8 +31,23 @@ feature 'Devise', devise_feature: true do
   end
 
   scenario 'User changes password' do
-    pending
-    expect(true).to be_false
+    visit '/'
+    click_link I18n.t('header.user.login')
+
+    fill_in :user_email, with: 'test@test.com'
+    fill_in :user_password, with: 'ABC123xyz!!'
+
+    click_on 'login_button'
+    expect(page).to have_content(I18n.t('devise.sessions.signed_in'))
+
+    click_link I18n.t('header.user.profile')
+
+    fill_in :user_password, with: 'DBC123xyz!!'
+    fill_in :user_password_confirmation, with: 'DBC123xyz!!'
+    fill_in :user_current_password, with: 'ABC123xyz!!'
+    click_button I18n.t('update')
+
+    expect(page).to have_content(I18n.t('devise.registrations.updated'))
   end
 
   scenario 'User changes email address and confirms' do
@@ -45,7 +60,7 @@ feature 'Devise', devise_feature: true do
     expect(true).to be_false
   end
 
-  scenario 'User requests another cofirmation mail' do
+  scenario 'User requests another confirmation mail' do
     pending
     expect(true).to be_false
   end
