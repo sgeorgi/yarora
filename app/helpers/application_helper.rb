@@ -3,7 +3,7 @@ module ApplicationHelper
 
   #
   # Displays the alternate locale icon of the already enabled locale
-  # @return a link_tag for changing locale
+  # @return a link_to element for changing locale
   # TODO: Make me pass in view tests
   #
   def locale_switch

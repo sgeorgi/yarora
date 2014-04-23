@@ -3,7 +3,7 @@ require 'spec_helper'
 # email = 'test@test.com'
 # password = 'ABC123xyz!!'
 
-feature 'Devise', devise_feature: true do
+feature 'Devise', with_devise_user: true do
   scenario 'Existing User logs in and logs out' do
     visit '/'
     click_on I18n.t('header.user.login')
