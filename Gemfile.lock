@@ -1,15 +1,15 @@
 GIT
   remote: git://github.com/activerecord-hackery/polyamorous.git
-  revision: c1a6a04972709a10296cb0705de2433791b3dbf8
+  revision: 49b2607c14583fb35189f74dce05e0dd3bcf0bd8
   specs:
     polyamorous (1.0.0)
       activerecord (>= 3.0)
 
 GIT
   remote: git://github.com/activerecord-hackery/ransack.git
-  revision: 1fd76da42be86ef1a93095d4336917d2f27d0667
+  revision: e072708cf2b15346a950bb2e45c423267b631bcb
   specs:
-    ransack (1.2.2)
+    ransack (1.2.3)
       actionpack (>= 3.0)
       activerecord (>= 3.0)
       activesupport (>= 3.0)
@@ -18,7 +18,7 @@ GIT
 
 GIT
   remote: git://github.com/gregbell/active_admin.git
-  revision: 65aae6b68e78aad3071b2f85242b19fd3fccf426
+  revision: 0e79f1be6bbe62519af75567f0f52d3e0822e3a0
   specs:
     activeadmin (1.0.0.pre)
       arbre (~> 1.0)
@@ -162,7 +162,7 @@ GEM
     mime-types (1.25.1)
     mini_portile (0.5.3)
     minitest (5.3.3)
-    multi_json (1.9.2)
+    multi_json (1.9.3)
     nokogiri (1.6.1)
       mini_portile (~> 0.5.0)
     orm_adapter (0.5.0)
@@ -198,7 +198,7 @@ GEM
       json (~> 1.4)
     responders (1.0.0)
       railties (>= 3.2, < 5)
-    rspec-collection_matchers (0.0.3)
+    rspec-collection_matchers (0.0.4)
       rspec-expectations (>= 2.99.0.beta1)
     rspec-core (3.0.0.beta2)
       rspec-support (= 3.0.0.beta2)
