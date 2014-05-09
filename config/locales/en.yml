@@ -43,6 +43,10 @@ en:
       resend_cofirmation: "Resend confirmation instruction"
 
   activerecord:
+    models:
+      user: 'User'
+      admin_user: 'Administrator'
+      user_profile: 'User profile'
     attributes:
       user:
         email: 'Email-address'
@@ -56,6 +60,8 @@ en:
         password_confirmation: 'Password confirmation'
         remember_me: 'Remember me?'
         current_password: 'Current password'
+      user_profile:
+        name: 'Full name'
     errors:
       models:
         user:

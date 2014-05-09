@@ -51,6 +51,7 @@ de:
       models:
         user: 'Benutzer'
         admin_user: 'Administrator'
+        user_profile: 'Benutzerprofil'
       attributes:
         user:
           email: 'E-Mail-Adresse'
@@ -64,6 +65,8 @@ de:
           password_confirmation: 'Kennwortbestätigung'
           remember_me: 'Anmeldedaten merken?'
           current_password: 'Aktuelles Kennwort'
+        user_profile:
+          name: 'Vorname und Nachname'
       errors:
         models:
           user:

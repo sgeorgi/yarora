@@ -43,12 +43,13 @@ group :development, :test do
   gem 'factory_girl_rails'
   gem 'mailcatcher'
   gem 'faker'
+  gem 'forgery'
 end
 
 group :test do
   gem 'database_cleaner'
   gem 'launchy'
   gem 'capybara', github: 'jnicklas/capybara', branch: 'master'
-#  gem 'minitest', '5.3.3'
+  gem 'shoulda-matchers'
 end
 
