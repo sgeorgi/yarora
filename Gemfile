@@ -1,5 +1,5 @@
 source 'https://rubygems.org'
-ruby '2.1.1'
+ruby '2.1.2'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.1.1'
@@ -49,5 +49,6 @@ group :test do
   gem 'database_cleaner'
   gem 'launchy'
   gem 'capybara', github: 'jnicklas/capybara', branch: 'master'
+#  gem 'minitest', '5.3.3'
 end
 

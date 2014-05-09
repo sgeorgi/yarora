@@ -52,7 +52,17 @@ feature 'Devise', with_devise_user: true do
   end
 
   scenario 'User forgets password' do
-    pending
+    visit '/'
+    click_link I18n.t('header.user.login')
+    click_link I18n.t('devise.ui.forgot_password')
+
+    expect(page).to have_css('h2', text: I18n.t('devise.ui.forgot_your_password'))
+    fill_in :user_email, with: 'test@test.com'
+    click_button I18n.t('devise.ui.send_reset_link')
+
+    expect(page).to have_content(I18n.t('devise.passwords.send_instructions'))
+
+    pending 'continue'
     expect(true).to be_false
   end
 
