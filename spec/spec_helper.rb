@@ -25,8 +25,9 @@ RSpec.configure do |config|
   config.include FactoryGirl::Syntax::Methods
 
   config.include Devise::TestHelpers, type: :controller
+  config.include ControllerTestHelper, type: :controller
   config.include Devise::TestHelpers, type: :view
-  config.include FeatureHelper, type: :feature
+  config.include FeatureTestHelper, type: :feature
 
   config.fixture_path = "#{::Rails.root}/spec/fixtures"
   config.use_transactional_fixtures = false

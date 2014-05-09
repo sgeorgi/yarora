@@ -1,4 +1,4 @@
-module FeatureHelper
+module FeatureTestHelper
   def user_logs_in
     visit '/'
     click_on I18n.t('header.user.login')
