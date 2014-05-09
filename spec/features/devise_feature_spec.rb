@@ -11,16 +11,22 @@ feature 'Devise', with_devise_user: true do
     expect(page).to have_content(I18n.t('devise.sessions.signed_out'))
   end
 
-  scenario 'User registers' do
+  scenario 'User registers and confims via Email' do
+    ActionMailer::Base.deliveries = []
+
     visit '/'
     click_link I18n.t('header.user.signup')
 
     fill_in :user_email, with: 'test2@test.com'
     fill_in :user_password, with: 'ABC123xyz!!'
     fill_in :user_password_confirmation, with: 'ABC123xyz!!'
-
     click_button I18n.t('devise.ui.sign_up')
+
     expect(page).to have_content(I18n.t('devise.registrations.signed_up_but_unconfirmed'))
+    expect(ActionMailer::Base.deliveries.last.to).to eq(['test2@test.com'])
+
+    user_visits_link_in_email(ActionMailer::Base.deliveries.last)
+    expect(page).to have_content(I18n.t('devise.confirmations.confirmed'))
   end
 
   scenario 'User changes password' do
@@ -37,6 +43,8 @@ feature 'Devise', with_devise_user: true do
   end
 
   scenario 'User changes email address and confirms' do
+    ActionMailer::Base.deliveries = []
+
     user_logs_in
 
     click_link I18n.t('header.user.profile')
@@ -52,6 +60,8 @@ feature 'Devise', with_devise_user: true do
   end
 
   scenario 'User forgets password' do
+    ActionMailer::Base.deliveries = []
+
     visit '/'
     click_link I18n.t('header.user.login')
     click_link I18n.t('devise.ui.forgot_password')
@@ -61,13 +71,42 @@ feature 'Devise', with_devise_user: true do
     click_button I18n.t('devise.ui.send_reset_link')
 
     expect(page).to have_content(I18n.t('devise.passwords.send_instructions'))
+    expect(ActionMailer::Base.deliveries.last.to).to eq(['test@test.com'])
 
-    pending 'continue'
-    expect(true).to be_false
+    user_visits_link_in_email(ActionMailer::Base.deliveries.last)
+    expect(page).to have_content(I18n.t('devise.ui.change_your_password'))
+
+    fill_in :user_password, with: '1234567!'
+    fill_in :user_password_confirmation, with: '1234567!'
+    click_button I18n.t('devise.ui.change_your_password')
+
+    expect(page).to have_content(I18n.t('devise.passwords.updated'))
   end
 
   scenario 'User requests another confirmation mail' do
-    pending
-    expect(true).to be_false
+    ActionMailer::Base.deliveries = []
+
+    visit '/'
+    click_link I18n.t('header.user.signup')
+
+    fill_in :user_email, with: 'test2@test.com'
+    fill_in :user_password, with: 'ABC123xyz!!'
+    fill_in :user_password_confirmation, with: 'ABC123xyz!!'
+    click_button I18n.t('devise.ui.sign_up')
+
+    expect(page).to have_content(I18n.t('devise.registrations.signed_up_but_unconfirmed'))
+    expect(ActionMailer::Base.deliveries.last.to).to eq(['test2@test.com'])
+
+    visit '/'
+    click_link I18n.t('header.user.login')
+    click_link I18n.t('devise.ui.no_confimation_mail')
+    fill_in :user_email, with: 'test2@test.com'
+    click_on I18n.t('devise.ui.resend_cofirmation')
+
+    expect(ActionMailer::Base.deliveries.size).to be == 2
+    expect(ActionMailer::Base.deliveries.last.to).to eq(['test2@test.com'])
+
+    user_visits_link_in_email(ActionMailer::Base.deliveries.last)
+    expect(page).to have_content(I18n.t('devise.confirmations.confirmed'))
   end
 end
