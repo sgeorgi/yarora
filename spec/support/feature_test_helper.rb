@@ -1,4 +1,13 @@
 module FeatureTestHelper
+  def wait_for_ajax
+    Timeout.timeout(30) do
+      loop do
+        return yield if page.evaluate_script('NProgress.status').nil?
+        sleep 0.3
+      end
+    end
+  end
+
   def user_logs_in
     visit '/'
     click_on I18n.t('header.user.login')

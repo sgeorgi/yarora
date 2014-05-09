@@ -4,25 +4,25 @@ describe PagesController do
   context 'when logged in' do
     before(:each) { login_user create(:user) }
 
-    describe 'GET #settings /settings' do
-      let(:request) { get :settings }
+    describe 'GET #user_profile /user_profile' do
+      let(:request) { get :user_profile }
 
       it 'returns with status 200' do
         request
-        expect(response).to be_ok
+        expect(response).to be_success
       end
 
-      it 'renders the template :settings' do
+      it 'renders the template :user_profile' do
         request
-        expect(response).to render_template(:settings)
+        expect(response).to render_template(:user_profile)
       end
     end
   end
 
   context 'when not logged in' do
-    describe 'GET #settings /settings' do
+    describe 'GET #user_profile /user_profile' do
       it 'redirect to the login path' do
-        get :settings
+        get :user_profile
         expect(response).to redirect_to(new_user_session_path)
       end
     end

@@ -17,9 +17,10 @@ de:
       admin_login: 'Administrator Anmeldung'
       logout: 'Abmelden'
       admin_logout: 'Administrator Abmelden'
-      profile: 'Benutzerprofil'
+      profile: 'Anmeldedaten'
       admin_profile: 'Administratorprofil'
       signup: 'Registrierung'
+      user_profile: 'Benutzerdaten'
     features: "Features"
   features:
     feature_a: 'Feature A'
@@ -28,6 +29,9 @@ de:
     feature_b_desc: 'Super tolles Feature'
     feature_c: 'Feature C'
     feature_c_desc: 'Ultra tolles Feature'
+  pages:
+    user_profile:
+      title: 'Benutzerdaten'
 
   devise:
     ui:

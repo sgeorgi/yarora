@@ -8,6 +8,6 @@ class PagesController < ApplicationController
   #
   # GET /settings
   #
-  def settings
+  def user_profile
   end
 end

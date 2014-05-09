@@ -11,9 +11,10 @@ en:
       admin_login: 'Admin Login'
       logout: 'Logout'
       admin_logout: 'Admin Logout'
-      profile: 'Profile'
+      profile: 'Account data'
       admin_profile: 'Admin Profile'
       signup: 'Register'
+      user_profile: 'User data'
 
     features: "Features"
   features:
@@ -23,6 +24,9 @@ en:
     feature_b_desc: 'Super nifty feature'
     feature_c: 'Feature C'
     feature_c_desc: 'Ultra sleazy feature'
+  pages:
+    user_profile:
+      title: 'User data'
 
   devise:
     ui:
