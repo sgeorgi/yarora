@@ -14,7 +14,8 @@
 //= require jquery_ujs
 //= require foundation
 //= require angular
+//= require angular-resource
 //= require_self
+//= require_tree ./app
 
-angular.module('yarora', []);
 $(function(){ $(document).foundation(); });

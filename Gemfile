@@ -50,5 +50,6 @@ group :test do
   gem 'launchy'
   gem 'capybara', github: 'jnicklas/capybara', branch: 'master'
   gem 'shoulda-matchers'
+  gem 'jasmine-rails'
 end
 
