@@ -7,7 +7,7 @@ GIT
 
 GIT
   remote: git://github.com/activerecord-hackery/ransack.git
-  revision: 4ae224d2ce50661352d974c65a6e7929d7a38733
+  revision: 993ffb191753a3d527547f0ef8e0790033527f84
   specs:
     ransack (1.2.3)
       actionpack (>= 3.0)
@@ -18,13 +18,12 @@ GIT
 
 GIT
   remote: git://github.com/gregbell/active_admin.git
-  revision: 480d68152a894202e2577fa3aab45928783ec86b
+  revision: 80c192ff5325e4d377a57a2023dbd6a078fe66e2
   specs:
     activeadmin (1.0.0.pre)
       arbre (~> 1.0)
       bourbon
       coffee-rails
-      devise (~> 3.2)
       formtastic (~> 2.3.0.rc3)
       inherited_resources (~> 1.3)
       jquery-rails
@@ -99,7 +98,6 @@ GEM
       coffee-script-source
       execjs
     coffee-script-source (1.7.0)
-    daemons (1.1.9)
     database_cleaner (1.2.0)
     devise (3.2.4)
       bcrypt (~> 3.0)
@@ -110,7 +108,6 @@ GEM
     diff-lcs (1.2.5)
     docile (1.1.3)
     erubis (2.7.0)
-    eventmachine (1.0.3)
     execjs (2.0.2)
     factory_girl (4.4.0)
       activesupport (>= 3.0.0)
@@ -123,8 +120,6 @@ GEM
     foundation-rails (5.2.2.0)
       railties (>= 3.1.0)
       sass (>= 3.2.0)
-    haml (4.0.5)
-      tilt
     has_scope (0.6.0.rc)
       actionpack (>= 3.2, < 5)
       activesupport (>= 3.2, < 5)
@@ -150,16 +145,6 @@ GEM
     mail (2.5.4)
       mime-types (~> 1.16)
       treetop (~> 1.4.8)
-    mailcatcher (0.2.4)
-      eventmachine
-      haml
-      i18n
-      json
-      mail
-      sinatra
-      skinny (>= 0.1.2)
-      sqlite3-ruby
-      thin
     mime-types (1.25.1)
     mini_portile (0.5.3)
     minitest (5.3.3)
@@ -170,8 +155,6 @@ GEM
     pg (0.17.1)
     polyglot (0.3.4)
     rack (1.5.2)
-    rack-protection (1.5.3)
-      rack
     rack-test (0.6.2)
       rack (>= 1.0)
     rails (4.1.1)
@@ -235,13 +218,6 @@ GEM
       multi_json
       simplecov-html (~> 0.8.0)
     simplecov-html (0.8.0)
-    sinatra (1.4.5)
-      rack (~> 1.4)
-      rack-protection (~> 1.4)
-      tilt (~> 1.3, >= 1.3.4)
-    skinny (0.2.3)
-      eventmachine (~> 1.0.0)
-      thin (~> 1.5.0)
     slim (2.0.2)
       temple (~> 0.6.6)
       tilt (>= 1.3.3, < 2.1)
@@ -259,14 +235,7 @@ GEM
       actionpack (>= 3.0)
       activesupport (>= 3.0)
       sprockets (~> 2.8)
-    sqlite3 (1.3.9)
-    sqlite3-ruby (1.3.3)
-      sqlite3 (>= 1.3.3)
     temple (0.6.7)
-    thin (1.5.1)
-      daemons (>= 1.0.9)
-      eventmachine (>= 0.12.6)
-      rack (>= 1.0.0)
     thor (0.19.1)
     thread_safe (0.3.3)
     tilt (1.4.1)
@@ -301,7 +270,6 @@ DEPENDENCIES
   jbuilder (~> 1.2)
   jquery-rails
   launchy
-  mailcatcher
   pg
   polyamorous!
   rails (= 4.1.1)

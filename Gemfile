@@ -41,7 +41,6 @@ group :development, :test do
   gem 'rspec-rails', '~> 3.0.0.beta2'
   gem 'simplecov', require: false, group: :test
   gem 'factory_girl_rails'
-  gem 'mailcatcher'
   gem 'faker'
   gem 'forgery'
 end
