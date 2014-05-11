@@ -41,6 +41,9 @@ group :development, :test do
   gem 'rspec-rails', '~> 3.0.0.beta2'
   gem 'simplecov', require: false, group: :test
   gem 'factory_girl_rails'
+  gem 'jasmine-rails'
+  gem 'jasmine-sinon-rails'
+  gem 'sinon-rails'
   gem 'faker'
   gem 'forgery'
 end
@@ -50,6 +53,5 @@ group :test do
   gem 'launchy'
   gem 'capybara', github: 'jnicklas/capybara', branch: 'master'
   gem 'shoulda-matchers'
-  gem 'jasmine-rails'
 end
 
