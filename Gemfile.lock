@@ -7,7 +7,7 @@ GIT
 
 GIT
   remote: git://github.com/activerecord-hackery/ransack.git
-  revision: 993ffb191753a3d527547f0ef8e0790033527f84
+  revision: 60417e441beacac7436a462c0b846266b0b3e90d
   specs:
     ransack (1.2.3)
       actionpack (>= 3.0)
@@ -18,7 +18,7 @@ GIT
 
 GIT
   remote: git://github.com/gregbell/active_admin.git
-  revision: 80c192ff5325e4d377a57a2023dbd6a078fe66e2
+  revision: ad33a0f6c772e74a23232baa7db0b3db2fe19db2
   specs:
     activeadmin (1.0.0.pre)
       arbre (~> 1.0)
