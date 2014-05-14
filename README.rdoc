@@ -1,5 +1,6 @@
 == Yet Another Ruby on Rails Application
 
+
 This is my own personal basic stack application to fork of new projects from. It is currently under heavy construction!
 
 Currently implemented features:
