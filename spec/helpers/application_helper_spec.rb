@@ -29,4 +29,18 @@ describe ApplicationHelper do
     # end
     pending 'ActionController::UrlGenerationError: No route matches {:locale=>"en"}'
   end
+
+  describe '#error_for_model_and_attribute' do
+    #
+    # Specially crafted to check error on UserProfile#name in this test example
+    #
+    it 'renders a div with the error message' do
+      user_profile = UserProfile.new
+      user_profile.name = nil
+      user_profile.valid?
+
+      expect(helper.error_for_model_and_attribute(user_profile, :name)).
+        to eq("<div class=\"error-label\">(#{I18n.t('activerecord.errors.models.user_profile.attributes.name.blank')})</div>")
+    end
+  end
 end
