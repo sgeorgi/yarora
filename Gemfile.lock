@@ -18,7 +18,7 @@ GIT
 
 GIT
   remote: git://github.com/gregbell/active_admin.git
-  revision: 12c42e60302e5d6c428bb91c1f2736ae7a0cc667
+  revision: 0af41dfdcab1f3974814d27d0b6f32929a0c682d
   specs:
     activeadmin (1.0.0.pre)
       arbre (~> 1.0)
@@ -160,7 +160,7 @@ GEM
       mini_portile (= 0.6.0)
     orm_adapter (0.5.0)
     pg (0.17.1)
-    phantomjs (1.9.7.0)
+    phantomjs (1.9.7.1)
     polyglot (0.3.4)
     rack (1.5.2)
     rack-test (0.6.2)
@@ -248,7 +248,7 @@ GEM
     treetop (1.4.15)
       polyglot
       polyglot (>= 0.3.1)
-    tzinfo (1.1.0)
+    tzinfo (1.2.0)
       thread_safe (~> 0.1)
     uglifier (2.5.0)
       execjs (>= 0.3.0)
