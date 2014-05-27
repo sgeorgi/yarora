@@ -29,9 +29,6 @@ de:
     feature_b_desc: 'Super tolles Feature'
     feature_c: 'Feature C'
     feature_c_desc: 'Ultra tolles Feature'
-  pages:
-    user_profile:
-      title: 'Benutzerdaten'
 
   devise:
     ui:
@@ -50,6 +47,10 @@ de:
       edit_user: 'Registrierung bearbeiten'
       waiting_for_confirmation: 'Warte auf Bestätigung der Emailadresse:'
       resend_cofirmation: "Bestätigungslink erneut verschicken"
+
+  user_profiles:
+    show:
+      title: 'Benutzerdaten'
 
   activerecord:
       models:

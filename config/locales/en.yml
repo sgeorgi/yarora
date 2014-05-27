@@ -24,8 +24,9 @@ en:
     feature_b_desc: 'Super nifty feature'
     feature_c: 'Feature C'
     feature_c_desc: 'Ultra sleazy feature'
-  pages:
-    user_profile:
+
+  user_profiles:
+    show:
       title: 'User data'
 
   devise:
