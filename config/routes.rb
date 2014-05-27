@@ -7,6 +7,8 @@ Yarora::Application.routes.draw do
   root 'welcome#index'
   get 'features' => 'welcome#features', as: :features
 
+  resource :user_profile, only: [:show]
+
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
 
