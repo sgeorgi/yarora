@@ -18,6 +18,7 @@ gem 'foundation-rails'
 gem 'slim-rails'
 gem 'jbuilder', '~> 1.2'
 gem 'devise'
+gem 'gravatar_image_tag'
 
 gem 'rails_12factor', group: :production
 

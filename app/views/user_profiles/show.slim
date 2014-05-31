@@ -1,7 +1,13 @@
 .row
   .large-6.small-centered.columns
     h1= t('.title')
-
+.row
+  .large-6.small-centered.columns
+    br
+    = image_tag gravatar_image_url(@user_profile.user.email), class: 'th [radius]'
+    br
+    br
+    br
 = form_for(@user_profile, html: { method: :put }) do |f|
   .row
     .large-6.small-centered.columns
