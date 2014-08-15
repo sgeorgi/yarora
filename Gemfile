@@ -10,7 +10,7 @@ gem 'uglifier', '>= 1.3.0'
 gem 'activeadmin', github: 'gregbell/active_admin'
 gem 'polyamorous', github: 'activerecord-hackery/polyamorous'
 gem 'ransack',     github: 'activerecord-hackery/ransack'
-gem 'formtastic',  github: 'justinfrench/formtastic'
+#gem 'formtastic',  github: 'justinfrench/formtastic'
 
 gem 'jquery-rails'
 gem 'jquery-ui-rails'
