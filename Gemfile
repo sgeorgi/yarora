@@ -41,7 +41,7 @@ end
 # gem 'debugger', group: [:development, :test]
 
 group :development, :test do
-  gem 'rspec-rails', '2.14.2'#, '3.0.0.beta2'
+  gem 'rspec-rails', '3.1.0' 
   gem 'simplecov', require: false, group: :test
   gem 'factory_girl_rails'
   gem 'jasmine-rails'
